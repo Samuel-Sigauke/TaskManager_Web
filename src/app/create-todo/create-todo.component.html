@@ -1,0 +1,19 @@
+<h2>Create Todo</h2>
+
+<div class="container">
+  <form (ngSubmit)="!todoForm.invalid && onSave()" #todoForm="ngForm">
+    <fieldset class="form-group">
+      <label for="desc"> Description </label>
+      <input type="text" class="form-control" name="description" [(ngModel)]="todoData.description" required="required">
+    </fieldset>
+
+    <fieldset class="form-group">
+      <label for="date"> Target Date </label>
+      <input type="date"
+      [(ngModel)]="todoData.targetDate"   
+      class="form-control" name="targetDate" required="required">
+    </fieldset>
+
+    <button class="btn btn-info" type="submit"> Save </button>
+</form>
+</div>
