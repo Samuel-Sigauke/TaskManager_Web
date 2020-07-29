@@ -1,0 +1,10 @@
+<div class="header">
+    <h2> Log In </h2>
+</div>
+<div class="cred">
+    Username : <input type="text" name="username" [(ngModel)]="username">
+    Password : <input type="password" name="password"  [(ngModel)]="password">
+
+    <button (click)=onLogin() class="btn btn-success" style="margin-left: 5px;"> Login </button>
+    <button (click)=onClear() class="btn btn-primary" style="margin-left: 5px;"> Clear </button>
+</div>
