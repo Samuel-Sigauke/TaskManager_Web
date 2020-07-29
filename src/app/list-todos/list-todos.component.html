@@ -1,0 +1,31 @@
+<div class="caption">
+  <h2>ToDoList</h2>
+</div>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th> ID </th>
+        <th> Description </th>
+        <th> Status </th>
+        <th> Target Date </th>
+        <th> Actions </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let todo of todosData">
+        <td> {{todo.id}} </td>
+        <td> {{todo.description}} </td>
+        <td> {{todo.completed}} </td>
+        <td> {{todo.targetDate | date }} </td>
+        <td>
+          <button (click)="onUpdate(todo)" class = "btn btn-info"> Update </button>
+          <button (click)="onDelete(todo)" class = "btn btn-danger" style="margin-left: 5px;"> Delete </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+ <!-- <div class="container">
+  <button (click)=onPrintmsg() class="btn btn-dark"> Login </button>
+ </div> -->
